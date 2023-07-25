@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\JobSearch.Data\JobSearch.Data.csproj" />
     <ProjectReference Include="..\JobSearch.MainService\JobSearch.MainService.csproj" />
+    <ProjectReference Include="..\SuperJob.API\SuperJob.API.csproj" />
   </ItemGroup>
 
 </Project>

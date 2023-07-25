@@ -2,6 +2,9 @@ using JobSearch.Data;
 using JobSearch.MainService.Interfaces;
 using JobSearch.MainService.Services;
 using Microsoft.EntityFrameworkCore;
+using SuperJob.API.Interfaces;
+using SuperJob.API.Services;
+using System.ComponentModel.Design;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +21,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ISearchService, SearchService>();
+
+
+//SuperJob Services
+builder.Services.AddScoped<SuperJob.API.Interfaces.IDictionaryService, DictionaryService>();
 
 var app = builder.Build();
 
